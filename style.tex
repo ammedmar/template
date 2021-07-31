@@ -1,0 +1,34 @@
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\usepackage[numbers, sort, compress]{natbib}
+
+% references
+\usepackage[bookmarks=true, linktocpage=true,
+bookmarksnumbered=true, breaklinks=true,
+pdfstartview=FitH, hyperfigures=false,
+plainpages=false, naturalnames=true,
+colorlinks=true, pagebackref=true,
+pdfpagelabels]{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=blue,
+	filecolor=blue,
+	linkcolor=blue,
+	urlcolor=blue
+}
+\usepackage[capitalize, noabbrev]{cleveref}
+\crefname{subsection}{\subsect\!}{subsections}
+\let\subsect\S % copying the subsection symbol since \S usually used
+
+% layout
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-1.85in}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-2in}
+\calclayout
+
+% Updating to MSC2020
+\makeatletter
+\@namedef{subjclassname@2020}{%
+	\textup{2020} Mathematics Subject Classification}
+\makeatother
