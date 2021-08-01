@@ -1,4 +1,6 @@
 \documentclass{amsart}
+\input{aux/style}
+\input{aux/commands}
 
 \title[Short title]{Full title}
 
@@ -6,25 +8,19 @@
 \address{A.~Medina-Mardones, Max Planck Institute for Mathematics \and University of Notre Dame}
 \email{\href{mailto:ammedmar@mpim-bonn.mpg.de}{ammedmar@mpim-bonn.mpg.de}}
 
-\input{style}
-
-\input{commands}
-
 \date{\today}
 \subjclass[2020]{.}
 \keywords{.}
 
 \begin{document}	
-	\input{abstract}
+	\input{aux/abstract}
 	
 	\maketitle
 	
-%	\input{section}
-%	\input{section}
-%	\input{section}
+	\input{template/introduction}
 	
 	\nocite{*}
 	
-	\bibliographystyle{abbrvnaturl}
-	\bibliography{bibliography}
+	\bibliographystyle{aux/abbrvnaturl}
+	\bibliography{aux/bibliography}
 \end{document}
