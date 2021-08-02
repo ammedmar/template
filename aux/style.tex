@@ -1,13 +1,18 @@
 \usepackage{tikz-cd}
 \usepackage{amssymb}
-\usepackage[numbers, sort, compress]{natbib}
+
+% bibliography
+\usepackage[backend=biber, style=alphabetic,
+backref=true, url=false]{biblatex}
+\addbibresource{aux/bibliography.bib}
+\addbibresource{aux/mypapers.bib}
 
 % references
 \usepackage[bookmarks=true, linktocpage=true,
 bookmarksnumbered=true, breaklinks=true,
 pdfstartview=FitH, hyperfigures=false,
 plainpages=false, naturalnames=true,
-colorlinks=true, pagebackref=true,
+colorlinks=true, pagebackref=false,
 pdfpagelabels]{hyperref}
 \hypersetup{
 	colorlinks,
@@ -17,12 +22,12 @@ pdfpagelabels]{hyperref}
 	urlcolor=blue
 }
 \usepackage[capitalize, noabbrev]{cleveref}
-\crefname{subsection}{\subsect\!}{subsections}
-\let\subsect\S % copying the subsection symbol since \S usually used
+\crefname{subsection}{\subsectSymbol\!}{subsections}
+\let\subsectSymbol\S % copying the subsection symbol
 
 % layout
 \setlength{\textwidth}{\paperwidth}
-\addtolength{\textwidth}{-1.85in}
+\addtolength{\textwidth}{-2in}
 \setlength{\textheight}{\paperheight}
 \addtolength{\textheight}{-2in}
 \calclayout
