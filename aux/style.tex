@@ -11,7 +11,7 @@ eprint=false]{biblatex}
 
 \renewbibmacro{in:}{}
 
-\addbibresource{aux/bibliography.bib}
+%\addbibresource{aux/bibliography.bib}
 \addbibresource{aux/mypapers.bib}	
 
 \DeclareFieldFormat{title}{\myhref{\mkbibemph{#1}}}
@@ -20,11 +20,11 @@ eprint=false]{biblatex}
 {title}{\myhref{\mkbibquote{#1\isdot}}}
 
 \newcommand{\doiorurl}{%
-	\iffieldundef{doi}
+	\iffieldundef{url}
 	{\iffieldundef{eprint}
 		{}
 		{http://arxiv.org/abs/\strfield{eprint}}}
-	{http://dx.doi.org/\strfield{doi}}%
+	{\strfield{url}}%
 }
 
 \newcommand{\myhref}[1]{%
@@ -33,7 +33,7 @@ eprint=false]{biblatex}
 		and
 		not test {\iftoggle{bbx:eprint}}
 		and
-		not test {\iftoggle{bbx:doi}}
+		not test {\iftoggle{bbx:url}}
 	}
 	{\href{\doiorurl}{#1}}
 	{#1}%
