@@ -2,18 +2,56 @@
 \usepackage{amssymb}
 
 % bibliography
-\usepackage[backend=biber, style=alphabetic,
-backref=true, url=false]{biblatex}
+\usepackage[backend=biber,
+style=alphabetic,
+backref=true,
+url=false,
+doi=false,
+eprint=false]{biblatex}
+
+\renewbibmacro{in:}{}
+
 \addbibresource{aux/bibliography.bib}
-\addbibresource{aux/mypapers.bib}
+\addbibresource{aux/mypapers.bib}	
+
+\DeclareFieldFormat{title}{\myhref{\mkbibemph{#1}}}
+\DeclareFieldFormat
+[article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+{title}{\myhref{\mkbibquote{#1\isdot}}}
+
+\newcommand{\doiorurl}{%
+	\iffieldundef{doi}
+	{\iffieldundef{eprint}
+		{}
+		{http://arxiv.org/abs/\strfield{eprint}}}
+	{http://dx.doi.org/\strfield{doi}}%
+}
+
+\newcommand{\myhref}[1]{%
+	\ifboolexpr{%
+		test {\ifhyperref}
+		and
+		not test {\iftoggle{bbx:eprint}}
+		and
+		not test {\iftoggle{bbx:doi}}
+	}
+	{\href{\doiorurl}{#1}}
+	{#1}%
+}
 
 % references
-\usepackage[bookmarks=true, linktocpage=true,
-bookmarksnumbered=true, breaklinks=true,
-pdfstartview=FitH, hyperfigures=false,
-plainpages=false, naturalnames=true,
-colorlinks=true, pagebackref=false,
+\usepackage[bookmarks=true,
+linktocpage=true,
+bookmarksnumbered=true,
+breaklinks=true,
+pdfstartview=FitH,
+hyperfigures=false,
+plainpages=false,
+naturalnames=true,
+colorlinks=true,
+pagebackref=false,
 pdfpagelabels]{hyperref}
+
 \hypersetup{
 	colorlinks,
 	citecolor=blue,
@@ -21,19 +59,21 @@ pdfpagelabels]{hyperref}
 	linkcolor=blue,
 	urlcolor=blue
 }
+
 \usepackage[capitalize, noabbrev]{cleveref}
-\crefname{subsection}{\subsectSymbol\!}{subsections}
-\let\subsectSymbol\S % copying the subsection symbol
+\let\subsectionSymbol\S
+\crefname{subsection}{\subsectionSymbol\!}{subsections}
 
 % layout
-\setlength{\textwidth}{\paperwidth}
-\addtolength{\textwidth}{-2in}
-\setlength{\textheight}{\paperheight}
-\addtolength{\textheight}{-2in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{1.2in}
 \calclayout
 
-% Updating to MSC2020
+% update to MSC2020
 \makeatletter
 \@namedef{subjclassname@2020}{%
 	\textup{2020} Mathematics Subject Classification}
 \makeatother
+
+% table of contents
+\setcounter{tocdepth}{1}
