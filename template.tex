@@ -1,6 +1,6 @@
 \documentclass{amsart}
-\input{aux/style}
-\input{aux/commands}
+\include{aux/style}
+\include{aux/commands}
 
 \title[Short title]{Full title}
 
@@ -14,14 +14,14 @@
 
 \begin{document}
 	\input{aux/abstract}
-	
+
 	\maketitle
-	
+
 	\input{sec/introduction}
 	\input{aux/acknowledgment}
 	\input{sec/preliminaries}
 	\input{sec/section}
-	
+
 	\nocite{*}
 	\printbibliography
 \end{document}
