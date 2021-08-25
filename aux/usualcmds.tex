@@ -10,6 +10,7 @@
 
 % hyphenation
 \hyphenation{co-chain}
+\hyphenation{co-al-ge-bras}
 
 % elements
 \newcommand{\id}{\mathsf{id}}
@@ -27,7 +28,7 @@
 \renewcommand{\k}{\Bbbk}
 \renewcommand{\S}{\mathbb{S}}
 \newcommand{\Fp}{{\mathbb{F}_p}}
-\newcommand{\Cp}{{\mathrm{C}_p}}
+\newcommand{\Cp}{{\mathbb{C}_p}}
 \newcommand{\graphs}{\mathfrak{G}}
 \newcommand{\gsimplex}{\mathbb{\Delta}}
 \newcommand{\gcube}{\mathbb{I}}
@@ -60,13 +61,18 @@
 \DeclareMathOperator{\forget}{U}
 \DeclareMathOperator{\yoneda}{\mathcal{Y}}
 \DeclareMathOperator{\chains}{N}
-\DeclareMathOperator{\cochains}{N^{\vee}}
 \DeclareMathOperator{\schains}{N^{\simplex}}
 \DeclareMathOperator{\cchains}{N^{\cube}}
+\DeclareMathOperator{\cochains}{N^{\vee}}
+\DeclareMathOperator{\scochains}{N^{\vee}_{\simplex}}
+\DeclareMathOperator{\ccochains}{N^{\vee}_{\cube}}
+\DeclareMathOperator{\Schains}{S}
+\DeclareMathOperator{\sSchains}{S^{\simplex}}
+\DeclareMathOperator{\cSchains}{S^{\cube}}
 \DeclareMathOperator{\gchains}{C}
 \DeclareMathOperator{\sSing}{Sing^{\simplex}}
 \DeclareMathOperator{\cSing}{Sing^{\cube}}
-\DeclareMathOperator{\loops}{\Omega}
+\newcommand{\loops}{\Omega}
 \DeclareMathOperator{\cobar}{\mathbf{\Omega}}
 \DeclareMathOperator{\triangulate}{\mathcal{T}}
 \DeclareMathOperator{\cubify}{\mathcal{U}}
@@ -87,7 +93,7 @@
 \newcommand{\pairing}[2]{\langle#1, #2\rangle}
 \newcommand{\xla}[1]{\xleftarrow{#1}}
 \newcommand{\xra}[1]{\xrightarrow{#1}}
-\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
 \newcommand{\pdfEinfty}{\texorpdfstring{${E_\infty}$}{E-infty}}
 
 % letters
@@ -106,6 +112,7 @@
 \newcommand{\cO}{\mathcal{O}}
 \newcommand{\cP}{\mathcal{P}}
 
+\newcommand{\cW}{\mathcal{W}}
 \newcommand{\cX}{\mathcal{X}}
 \newcommand{\cY}{\mathcal{Y}}
 \newcommand{\cZ}{\mathcal{Z}}
