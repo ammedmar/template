@@ -1,7 +1,7 @@
 \documentclass{amsart}
-\include{aux/style}
-\include{aux/usualcmds}
-\include{aux/commands}
+\usepackage{aux/style}  % add packages to style.sty
+\usepackage{aux/commands} % new commands to commands.sty
+\addbibresource{aux/bibliography.bib} % add references to bibliography.bib
 
 \title[Short title]{Full title}
 
@@ -14,15 +14,11 @@
 \keywords{.}
 
 \begin{document}
-	\input{aux/abstract}
-
+	\input{sec/abstract}
 	\maketitle
-
 	\input{sec/introduction}
-	\input{aux/acknowledgment}
-	\input{sec/preliminaries}
+	\input{sec/acknowledgment}
 	\input{sec/section}
-
 	\nocite{*}
 	\printbibliography
 \end{document}

@@ -26,8 +26,9 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \renewcommand{\k}{\Bbbk}
-\renewcommand{\S}{\mathbb{S}}
+\newcommand{\Ftwo}{{\mathbb{F}_2}}
 \newcommand{\Fp}{{\mathbb{F}_p}}
+\renewcommand{\S}{\mathbb{S}}
 \newcommand{\Cp}{{\mathbb{C}_p}}
 \newcommand{\graphs}{\mathfrak{G}}
 \newcommand{\gsimplex}{\mathbb{\Delta}}
@@ -60,6 +61,7 @@
 \DeclareMathOperator{\free}{F}
 \DeclareMathOperator{\forget}{U}
 \DeclareMathOperator{\yoneda}{\mathcal{Y}}
+\DeclareMathOperator{\EZ}{EZ}
 \DeclareMathOperator{\chains}{N}
 \DeclareMathOperator{\schains}{N^{\simplex}}
 \DeclareMathOperator{\cchains}{N^{\cube}}
@@ -69,6 +71,8 @@
 \DeclareMathOperator{\Schains}{S}
 \DeclareMathOperator{\sSchains}{S^{\simplex}}
 \DeclareMathOperator{\cSchains}{S^{\cube}}
+\DeclareMathOperator{\sScochains}{S^{\vee}_{\simplex}}
+\DeclareMathOperator{\cScochains}{S^{\vee}_{\cube}}
 \DeclareMathOperator{\gchains}{C}
 \DeclareMathOperator{\sSing}{Sing^{\simplex}}
 \DeclareMathOperator{\cSing}{Sing^{\cube}}
@@ -93,10 +97,13 @@
 \newcommand{\pairing}[2]{\langle#1, #2\rangle}
 \newcommand{\xla}[1]{\xleftarrow{#1}}
 \newcommand{\xra}[1]{\xrightarrow{#1}}
-\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
 \newcommand{\pdfEinfty}{\texorpdfstring{${E_\infty}$}{E-infty}}
 
 % letters
+\newcommand{\bk}{\mathbb{k}}
+\newcommand{\bF}{\mathbb{F}}
+
 \newcommand{\sA}{\mathsf{A}}
 \newcommand{\sB}{\mathsf{B}}
 \newcommand{\sC}{\mathsf{C}}
@@ -116,6 +123,9 @@
 \newcommand{\cX}{\mathcal{X}}
 \newcommand{\cY}{\mathcal{Y}}
 \newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\rB}{\mathrm{B}}
+\newcommand{\rP}{\mathrm{P}}
 
 % comments
 \newcommand{\anibal}[1]{\textcolor{blue}{\underline{Anibal}: #1}}
