@@ -1,6 +1,7 @@
 \documentclass{amsart}
-\usepackage{aux/style}  % add packages to style.sty
-\usepackage{aux/commands} % new commands to commands.sty
+
+\input{aux/style}  % add packages above
+\input{aux/commands} % add new commands to commands.tex
 \addbibresource{aux/bibliography.bib} % add references to bibliography.bib
 
 \title[Short title]{Full title}
@@ -20,5 +21,6 @@
 	\input{sec/acknowledgment}
 	\input{sec/section}
 	\nocite{*}
+	\sloppy
 	\printbibliography
 \end{document}
