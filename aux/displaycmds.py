@@ -1,5 +1,5 @@
 '''
-Reads defined commands in and creates tex file to render them all
+Reads defined commands in usualcmds.tex and creates displaycmds.tex file to render them all
 
 '''
 
@@ -26,3 +26,5 @@ with open('usualcmds.tex', 'r') as f:
                 fp.write(f'\\verb|{m[1]}{{x}}|, ${m[1]}{{x}}$ ; \n')
             if m[2] == '2':
                 fp.write(f'\\verb|{m[1]}{{x}}{{y}}|, ${m[1]}{{x}}{{y}}$ ; \n')
+
+print('done succesfully')
