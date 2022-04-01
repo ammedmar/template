@@ -18,6 +18,7 @@ with open('usualcmds.tex', 'r') as f:
     matches2 = pattern2.finditer(contents)
 
     with open('displaycmds.tex', 'w') as fp:
+        fp.write('\\subsection*{Commands} \n\n')
         for m in matches1:
             if all([w not in m[1] for w in skip]):
                 fp.write(f'\\verb|{m[1]}|, ${m[1]}$ ; \n')
