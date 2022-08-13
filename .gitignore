@@ -10,3 +10,6 @@
 *.txss
 *.bcf
 *.xml
+
+referee/
+journal/
