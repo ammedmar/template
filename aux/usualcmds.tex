@@ -1,8 +1,12 @@
 % environments
 \newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{proposition*}{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{corollary*}{Corollary}
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
@@ -11,8 +15,12 @@
 \newtheorem*{remark*}{Remark}
 \newtheorem{example}[theorem]{Example}
 \newtheorem*{example*}{Example}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem*{construction*}{Construction}
 \newtheorem{convention}[theorem]{Convention}
 \newtheorem*{convention*}{Convention}
+\newtheorem{terminology}[theorem]{Terminology}
+\newtheorem*{terminology*}{Terminology}
 \newtheorem{notation}[theorem]{Notation}
 \newtheorem*{notation*}{Notation}
 \newtheorem{question}[theorem]{Question}
@@ -25,6 +33,9 @@
 \hyphenation{co-al-ge-bras}
 \hyphenation{co-bound-ary}
 \hyphenation{co-bound-aries}
+\hyphenation{Func-to-rial-i-ty}
+\hyphenation{colim-it}
+\hyphenation{di-men-sional}
 
 % basics
 \DeclareMathOperator{\face}{d}
@@ -79,6 +90,8 @@
 \DeclareMathOperator{\cobar}{\mathbf{\Omega}}
 \DeclareMathOperator{\proj}{\pi}
 \DeclareMathOperator{\incl}{\iota}
+\DeclareMathOperator{\Sq}{Sq}
+\DeclareMathOperator{\ind}{ind}
 
 % chains
 \DeclareMathOperator{\chains}{N}
@@ -90,6 +103,8 @@
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \DeclarePairedDelimiter\angles{\langle}{\rangle}
 \DeclarePairedDelimiter\set{\{}{\}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 % other
 \newcommand{\id}{\mathsf{id}}
@@ -97,7 +112,6 @@
 \newcommand{\op}{\mathrm{op}}
 \DeclareMathOperator*{\colim}{colim}
 \DeclareMathOperator{\coker}{coker}
-\DeclareMathOperator{\Med}{\mathcal{M}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\End}{\mathrm{End}}
 \newcommand{\coEnd}{\mathrm{coEnd}}
@@ -106,7 +120,10 @@
 \newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
 
 % comments
-\newcommand{\anibal}[1]{\textcolor{blue}{\underline{Anibal}: #1}}
+\newcommand{\anibal}[1]{\noindent\textcolor{blue}{\underline{Anibal}: #1}}
+
+% pdf
+\newcommand{\pdfEinfty}{\texorpdfstring{${E_\infty}$}{E-infty}}
 
 % mathrm
 \newcommand{\rA}{\mathrm{A}}
