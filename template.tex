@@ -1,14 +1,13 @@
-\immediate\write18{biber \jobname}
-
+%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{amsart}
 \input{aux/style}
 \input{aux/usualcmds}
 \addbibresource{aux/usualpapers.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%
+\input{aux/packages}                   % add packages here
 \input{aux/commands}                   % add commands here
 \addbibresource{aux/bibliography.bib}  % add references here
-%\usepackage{package}                  % add packages here
 
 %%%%%%%%%%%%%%%%%%%%%%
 \title[Short title]{Full title}

@@ -16,8 +16,8 @@
 	isbn=false,
 	eprint=false]{biblatex}
 
-\renewbibmacro{in:}{}  % don't display "in:" before the journal name
-\AtEveryBibitem{\clearfield{pages}}  % don't show page numbers
+\renewbibmacro{in:}{} % don't display "in:" before the journal name
+\AtEveryBibitem{\clearfield{pages}} % don't show page numbers
 
 \DeclareFieldFormat{title}{\myhref{\mkbibemph{#1}}}
 \DeclareFieldFormat
@@ -67,7 +67,7 @@
 }
 
 \usepackage[capitalize, noabbrev]{cleveref}
-\crefname{subsection}{\S\!}{subsections}
+\crefname{subsection}{\S\!\!}{subsections}
 
 % layout
 \addtolength{\textwidth}{0in}
@@ -81,4 +81,4 @@
 \makeatother
 
 % table of contents
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
