@@ -1,4 +1,4 @@
-% environments
+% theorem environments
 \newtheorem{theorem}{Theorem}
 \newtheorem*{theorem*}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
@@ -85,14 +85,10 @@
 \DeclareMathOperator{\forget}{U}
 \DeclareMathOperator{\yoneda}{\mathcal{Y}}
 \DeclareMathOperator{\Sing}{Sing}
-\newcommand{\loops}{\Omega}
-\DeclareMathOperator{\cobar}{\mathbf{\Omega}}
 \DeclareMathOperator{\proj}{\pi}
 \DeclareMathOperator{\incl}{\iota}
 \DeclareMathOperator{\Sq}{Sq}
 \DeclareMathOperator{\ind}{ind}
-
-% chains
 \DeclareMathOperator{\chains}{N}
 \DeclareMathOperator{\cochains}{N^{\vee}}
 \DeclareMathOperator{\gchains}{C}
@@ -116,14 +112,12 @@
 \newcommand{\coEnd}{\mathrm{coEnd}}
 \newcommand{\xla}[1]{\xleftarrow{#1}}
 \newcommand{\xra}[1]{\xrightarrow{#1}}
-\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\defn}[1]{{\color{ForestGreen} \emph{#1}}}
 
 % comments
-\newcommand{\anibal}[1]{\noindent\textcolor{blue}{\underline{Anibal}: #1}}
-\newcommand{\TBW}{\noindent TBW}
-
-% pdf
-\newcommand{\pdfEinfty}{\texorpdfstring{${E_\infty}$}{E-infty}}
+\newcommand{\anibal}[1]{\todo[An.\!]{#1}}
+\newcommand{\TBW}{\noindent TBW\todo{TBW}}
 
 % mathrm
 \newcommand{\rA}{\mathrm{A}}

@@ -1,3 +1,36 @@
 % !TEX root = ../st_st.tex
 
-% Include adittional packages below
+% --- Font encoding and typography ---
+\usepackage[T1]{fontenc} % Better font encoding (supports accents, hyphenation)
+\usepackage{lmodern} % Latin Modern fonts (vector version of Computer Modern)
+\usepackage{microtype} % Subtle typographic enhancements (kerning, spacing)
+
+% --- Math packages ---
+\usepackage{mathtools} % Enhancements to amsmath (recommended over amsmath)
+\usepackage{amssymb} % Extra math symbols
+\usepackage{mathbbol} % Extended \mathbb{} support (digits, lowercase)
+
+% --- Colors ---
+\usepackage[dvipsnames]{xcolor} % Named colors (e.g., NaviBlue, ForestGreen)
+
+% --- Diagrams ---
+\usepackage{tikz-cd} % Commutative diagrams
+
+% --- Text and quoting ---
+\usepackage{csquotes} % Context-aware quotation marks via \enquote{}
+
+% --- Custom commands ---
+\usepackage{xargs} % Multiple optional args with \newcommandx
+
+% --- Lists and enumeration ---
+\usepackage{enumerate} % Custom labels in numbered lists
+\usepackage{enumitem} % Full control over list spacing, labels, etc.
+
+% --- Comments and to-do's ---
+\usepackage{todo} % Package for notes, to-do boxes, and remarks
+\def\todoname{Comments, remarks and to-do's}
+
+% --- Drawing ---
+\usepackage{tikz} % Drawing package
+\usepackage{tikz-3dplot} % 3D plots in TikZ
+\usetikzlibrary{shapes, positioning, calc, arrows}

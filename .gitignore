@@ -10,4 +10,4 @@
 *.txss
 *.bcf
 *.xml
-arXiv/
+.DS_Store
