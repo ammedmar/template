@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{amsart}
+\input{aux/style}
+\input{aux/packages} % add packages here
+\input{aux/usualcmds}
+\input{aux/commands} % add commands here
+\addbibresource{aux/usualpapers.bib}
+\addbibresource{aux/bibliography.bib} % add references here
+
+%%%%%%%%%%%%%%%%%%%%%%
+\title[Short title]{Template}
+
+\author{Anibal~M.~Medina-Mardones}
+\address{Western University, Canada}
+\email{\href{mailto:anibal.medina.mardones@uwo.ca}{anibal.medina.mardones@uwo.ca}}
+
+\date{\today}
+\subjclass[2020]{55N31, 55S05, 53C23}
+%	55N31 Persistent homology and applications, topological data analysis.
+%	55S05 Primary cohomology operations in algebraic topology,
+%	53C23 Global geometric and topological methods (à la Gromov); differential geometric analysis on metric spaces
+
+\keywords{\TBW}
+
+\begin{document}
+	\input{sec/abstract}
+	\maketitle
+	\input{sec/introduction}
+	\input{sec/acknowledgment}
+	\input{aux/displaycmds}
+	\nocite{*}
+	\sloppy
+	\printbibliography
+	\todos
+\end{document}
